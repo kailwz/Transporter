@@ -380,7 +380,7 @@ class mainWindow(QMainWindow):
 
         self.cursor.execute('select price from productinfo where id="1"')
         price = self.cursor.fetchall()
-        productprice = str(price)[3:-4]
+        productprice = str(price)[2:-3]
 
         self.priceLabel = QLabel(self.myInfoFrame)
         self.priceLabel.setAlignment(Qt.AlignCenter)
@@ -400,7 +400,7 @@ class mainWindow(QMainWindow):
 
         self.cursor.execute('select quantity from productinfo where id="1"')
         quantity = self.cursor.fetchall()
-        productquantity = str(quantity)[3:-4]
+        productquantity = str(quantity)[2:-3]
 
         self.unitLabel = QLabel(self.myInfoFrame)
         self.unitLabel.setAlignment(Qt.AlignCenter)
